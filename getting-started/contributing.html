@@ -7,7 +7,7 @@
     <meta name="author" content="Jake Carrington" />
     <meta name="color-scheme" content="dark light" />
 
-    <title>Getting Started</title>
+    <title>Contributing</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -141,49 +141,45 @@
 </form>
 </div>
     </header>
-    <nav class="gd-breadcrumbs"><menu></menu></nav>
+    <nav class="gd-breadcrumbs"><menu><li><span>Contributing</span></li><li><a href="/getting-started/index.html">Getting Started</a></li></menu></nav>
 <main>
   <aside class="gd-nav">
-    <nav> <ul><li><a href="/getting-started" class="active">Getting Started</a></li><li><a href="/getting-started/contributing">Contributing</a></li></ul></nav>
+    <nav> <ul><li><a href="/getting-started">Getting Started</a></li><li><a href="/getting-started/contributing" class="active">Contributing</a></li></ul></nav>
   </aside>
   <article class="gd-article">
-  <h1 id="getting-started">
-    Getting started
+  <h1 id="contributing">
+    Contributing
   </h1>
-  <h2 id="installation">
-    Installation
+  <p>
+    Docodile is an open source project, the code is available for anyone to copy, modify and share. You can raise PRs on the <a href="https://github.com/docodile/docodile/pulls">GitHub page</a> or <a href="https://github.com/docodile/docodile/issues">open an issue</a> if you come across a bug or think of a feature you'd like to see implemented.
+  </p>
+  <p>
+    The following section broadly describes the current priorities of the project and how you can most meaningfully contribute to its development.
+  </p>
+  <h2 id="testing">
+    Testing
   </h2>
-  <h3 id="docker-/-podman">
-    Docker / Podman
-  </h3>
   <p>
-    The easiest way to get up and running on any machine is to pull <a href="https://hub.docker.com/r/jakeecarrington/docodile"title="jakeecarrington/docodile">the Docker image</a> and mount your directories to the appropriate places as shown below.
+    The best thing you can do to help right now is use Docodile and <a href="https://github.com/docodile/docodile/issues">raise an issue</a> if you run into any problems. Docodile has only been tested on Linux so far so feedback from Mac OS and Windows users is greatly appreciated. You will almost certainly run into issues trying to build from source, so understanding what is not cross-platform would be very helpful. 
   </p>
-  <pre class="language-shell">
-    <code>
-podman run -d -v ./docs:/docodile/docs -v ./templates:/docodile/templates -v ./docodile.config:/docodile/docodile.config -p 6006:6006 docker.io/jakeecarrington/docodile:v0.1.3
-    </code>
-  </pre>
-  <h3 id="from-source">
-    From source
-  </h3>
+  <h2 id="pull-requests">
+    Pull requests
+  </h2>
   <p>
-    To install from source you can clone this repo and run <code>make install</code>. This will only work on Linux, maybe MacOS.
+    If you see something you think can be improved, no matter what it is, a pull request is always appreciated.
   </p>
-  <div class="admonition question">
-    <p class="admonition-title">
-      Want to help?
-    </p>
-    <p>
-      If you have knowledge of programming for Windows in C your pull requests would be greatly appreciated. See <a href="/getting-started/contributing">Contributing</a> for more information.
-    </p>
-  </div>
+  <h2 id="themes-and-stying">
+    Themes and stying
+  </h2>
+  <p>
+    Docodile is largely inspired by <a href="https://squidfunk.github.io/mkdocs-material/">Material for Mkdocs</a> but it would be great if it had more of its own identity. Any experts in UX and/or CSS are welcome to submit ideas for how Docodile should look. We would also like to build a collection of themes that the user can choose from.
+  </p>
 </article>
-  <aside class="gd-toc"><nav><ul><li><a class="toc-1" href="#getting-started">Getting started</a></li><li><a class="toc-2" href="#installation">Installation</a></li><li><a class="toc-3" href="#docker-/-podman">Docker / Podman</a></li><li><a class="toc-3" href="#from-source">From source</a></li></ul></nav></aside>
+  <aside class="gd-toc"><nav><ul><li><a class="toc-1" href="#contributing">Contributing</a></li><li><a class="toc-2" href="#testing">Testing</a></li><li><a class="toc-2" href="#pull-requests">Pull requests</a></li><li><a class="toc-2" href="#themes-and-stying">Themes and stying</a></li></ul></nav></aside>
 </main>
 
     <footer class="gd-footer">
-      <nav class="gd-footer-nav"><a class="gd-nav-link next" href="/getting-started/contributing"><div><small>Next</small><h2>Contributing</h2></div><i class="bi bi-arrow-right-short"></i></a></nav>
+      <nav class="gd-footer-nav"><a class="gd-nav-link prev" href="/getting-started"><div><small>Prev</small><h2>Getting Started</h2></div><i class="bi bi-arrow-left-short"></i></a><a class="gd-nav-link next" href="/setup"><div><small>Next</small><h2>Setup</h2></div><i class="bi bi-arrow-right-short"></i></a></nav>
       <div class="gd-footer-info">
         <a class="gd-repo hidden" href="https://github.com/docodile/docodile">
   <i id="repo-icon" class="bi bi-github"></i>
