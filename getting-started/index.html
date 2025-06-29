@@ -153,6 +153,17 @@
   <h2 id="installation">
     Installation
   </h2>
+  <h3 id="docker-/-podman">
+    Docker / Podman
+  </h3>
+  <p>
+    The easiest way to get up and running on any machine is to pull the Docker image and mount your <code>docs</code> folder to <code>/docodile/docs</code>.
+  </p>
+  <pre class="language-shell">
+    <code>
+podman run -d -v ./docs:/docodile/docs -v ./templates:/docodile/templates -v ./docodile.config:/docodile/docodile.config -p 6006:6006 docodile
+    </code>
+  </pre>
   <h3 id="from-source">
     From source
   </h3>
@@ -168,7 +179,7 @@
     </p>
   </div>
 </article>
-  <aside class="gd-toc"><nav><ul><li><a class="toc-1" href="#getting-started">Getting started</a></li><li><a class="toc-2" href="#installation">Installation</a></li><li><a class="toc-3" href="#from-source">From source</a></li></ul></nav></aside>
+  <aside class="gd-toc"><nav><ul><li><a class="toc-1" href="#getting-started">Getting started</a></li><li><a class="toc-2" href="#installation">Installation</a></li><li><a class="toc-3" href="#docker-/-podman">Docker / Podman</a></li><li><a class="toc-3" href="#from-source">From source</a></li></ul></nav></aside>
 </main>
 
     <footer class="gd-footer">
