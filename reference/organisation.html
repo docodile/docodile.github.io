@@ -15,20 +15,48 @@
 
     <link rel="stylesheet" type="text/css" href="/assets/styles/404.css" />
 <link rel="stylesheet" type="text/css" href="/assets/styles/main.css" />
+<link rel="stylesheet" type="text/css" href="/assets/styles/mobile-menu.css" />
 <link rel="stylesheet" type="text/css" href="/assets/styles/prism-themes/default-prism-theme.css" />
 <link rel="stylesheet" type="text/css" href="/assets/styles/reset.css" />
 <link rel="stylesheet" type="text/css" href="/assets/styles/vars.css" />
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@100&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@100&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -44,7 +72,29 @@
   >
     <header class="gd-header">
       <div class="gd-header-title">
-        <img class="gd-logo" src="/assets/docodile-logo.svg">
+        <button class="gd-mobile-menu-button" onclick="toggleMenu()">
+  <i class="bi bi-list"></i>
+</button>
+<div class="gd-mobile-menu hidden">
+  <div class="gd-mobile-menu-header">
+    <button class="gd-mobile-menu-button" onclick="toggleMenu()">
+      <i class="bi bi-arrow-left-short"></i>
+    </button>
+    Organisation
+  </div>
+  <nav>
+    <menu> <details name="menu-section"><summary><a href="/getting-started">Getting Started</a></summary><ul><li><a href="/getting-started/contributing">Contributing</a></li></ul></details><details name="menu-section"><summary><a href="/setup">Setup</a></summary><ul><li><a href="/setup/appearance">Appearance</a></li><li><a href="/setup/navigation">Navigation</a></li></ul></details><details name="menu-section"><summary><a href="/reference">Reference</a></summary><ul><li><a href="/reference/markdown">Markdown</a></li><details><summary><a href="/reference/markdown-extensions">Markdown Extensions</a></summary><ul><li><a href="/reference/markdown-extensions/admonitions">Admonitions</a></li><li><a href="/reference/markdown-extensions/collapsible-headings">Collapsible Headings</a></li><li><a href="/reference/markdown-extensions/tables">Tables</a></li></ul></details><li><a href="/reference/organisation" class="active">Organisation</a></li></ul></details><details name="menu-section"><summary>Docodile</summary><ul></ul></details> </menu>
+  </nav>
+</div>
+<script>
+  const menuEl = document.querySelector(".gd-mobile-menu");
+  function toggleMenu() {
+    const isMenuClosed = menuEl.classList.contains("hidden");
+    if (isMenuClosed) menuEl.classList.remove("hidden");
+    else menuEl.classList.add("hidden");
+  }
+</script>
+ <img class="gd-logo" src="/assets/docodile-logo.svg">
         <a href="/" class="gd-title"><h1>Docodile</h1></a>
       </div>
       <div class="gd-nav-bar"><nav><menu><li><a href="/getting-started">Getting Started</a></li><li><a href="/setup">Setup</a></li><li class="active"><a href="/reference">Reference</a></li></menu></nav> <form class="gd-search" onsubmit="search(event)" oninput="search(event)">
