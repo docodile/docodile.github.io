@@ -7,7 +7,7 @@
     <meta name="author" content="Jake Carrington" />
     <meta name="color-scheme" content="dark light" />
 
-    <title>Markdown Extensions</title>
+    <title>Footnotes</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,10 +80,10 @@
     <button class="gd-mobile-menu-button" onclick="toggleMenu()">
       <i class="bi bi-arrow-left-short"></i>
     </button>
-    Markdown Extensions
+    Footnotes
   </div>
   <nav>
-    <menu> <details name="menu-section-0" ><summary><a href="/getting-started">Getting Started</a></summary><ul><li><a href="/getting-started/contributing.html">Contributing</a></li></ul></details><details name="menu-section-0" ><summary><a href="/setup">Setup</a></summary><ul><li><a href="/setup/appearance.html">Appearance</a></li><li><a href="/setup/navigation.html">Navigation</a></li></ul></details><details name="menu-section-0" class="active" open><summary><a href="/reference">Reference</a></summary><ul><li><a href="/reference/markdown.html">Markdown</a></li><details name="menu-section-1" class="active" open><summary><a href="/reference/markdown-extensions">Markdown Extensions</a></summary><ul><li><a href="/reference/markdown-extensions/admonitions.html">Admonitions</a></li><li><a href="/reference/markdown-extensions/collapsible-headings.html">Collapsible Headings</a></li><li><a href="/reference/markdown-extensions/footnotes.html">Footnotes</a></li><li><a href="/reference/markdown-extensions/tables.html">Tables</a></li></ul></details><li><a href="/reference/organisation.html">Organisation</a></li></ul></details><li><a href="/whats-new.html">Whats New</a></li> </menu>
+    <menu> <details name="menu-section-0" ><summary><a href="/getting-started">Getting Started</a></summary><ul><li><a href="/getting-started/contributing.html">Contributing</a></li></ul></details><details name="menu-section-0" ><summary><a href="/setup">Setup</a></summary><ul><li><a href="/setup/appearance.html">Appearance</a></li><li><a href="/setup/navigation.html">Navigation</a></li></ul></details><details name="menu-section-0" class="active" open><summary><a href="/reference">Reference</a></summary><ul><li><a href="/reference/markdown.html">Markdown</a></li><details name="menu-section-1" class="active" open><summary><a href="/reference/markdown-extensions">Markdown Extensions</a></summary><ul><li><a href="/reference/markdown-extensions/admonitions.html">Admonitions</a></li><li><a href="/reference/markdown-extensions/collapsible-headings.html">Collapsible Headings</a></li><li class="active"><a href="/reference/markdown-extensions/footnotes.html">Footnotes</a></li><li><a href="/reference/markdown-extensions/tables.html">Tables</a></li></ul></details><li><a href="/reference/organisation.html">Organisation</a></li></ul></details><li><a href="/whats-new.html">Whats New</a></li> </menu>
   </nav>
 </div>
 <script>
@@ -191,27 +191,52 @@
 </form>
 </div>
     </header>
-    <nav class="gd-breadcrumbs"><menu><li><span>Markdown Extensions</span></li><li><a href="/reference/index.html">Reference</a></li></menu></nav>
+    <nav class="gd-breadcrumbs"><menu><li><span>Footnotes</span></li><li><a href="/reference/markdown-extensions/index.html">Markdown Extensions</a></li><li><a href="/reference/index.html">Reference</a></li></menu></nav>
 <main>
   <aside class="gd-nav">
-    <nav><a class="gd-back" href="/reference/index.html">Back</a> <ul><li><a href="/reference/markdown-extensions" class="active">Markdown Extensions</a></li><li><a href="/reference/markdown-extensions/admonitions">Admonitions</a></li><li><a href="/reference/markdown-extensions/collapsible-headings">Collapsible Headings</a></li><li><a href="/reference/markdown-extensions/footnotes">Footnotes</a></li><li><a href="/reference/markdown-extensions/tables">Tables</a></li></ul></nav>
+    <nav><a class="gd-back" href="/reference/index.html">Back</a> <ul><li><a href="/reference/markdown-extensions">Markdown Extensions</a></li><li><a href="/reference/markdown-extensions/admonitions">Admonitions</a></li><li><a href="/reference/markdown-extensions/collapsible-headings">Collapsible Headings</a></li><li><a href="/reference/markdown-extensions/footnotes" class="active">Footnotes</a></li><li><a href="/reference/markdown-extensions/tables">Tables</a></li></ul></nav>
   </aside>
   <article class="gd-article">
-  <h1 id="markdown-extensions">
-    Markdown extensions
+  <h1 id="footnotes">
+    Footnotes
   </h1>
+  <pre class="language-markdown">
+    <code>
+This is a reference to something I want to cite.[^1]
+
+[^1]: https://duckduckgo.com
+    </code>
+  </pre>
   <p>
-    Beyond the basics, <code>Docodile</code> supports more advanced Markdown syntax. Many you will have seen in other Markdown processors, like <a href="admonitions">Admonitions</a> and <a href="tables">Tables</a> which are supported by most major static site generators. 
+    This is a reference to something I want to cite.<sup><a href="#fn-1">
+1
+      </a></sup>
   </p>
   <p>
-    Some extensions in <code>Docodile</code> are not necessarily available in other Markdown processors and therefore might not work in both. 
+    Here's another<sup><a href="#fn-2">
+2
+      </a></sup>
+  </p>
+  <p>
+    Here's a footnote using an arbitrary label.<sup><a href="#fn-my-footnote">
+my-footnote
+      </a></sup>
+  </p>
+  <p>
+    <li id="fn-1">
+ https://duckduckgo.com 
+      </li><li id="fn-2">
+ This is just plain text.
+      </li><li id="fn-my-footnote">
+ Yep, you don't just have to use numbers.
+      </li>
   </p>
 </article>
-  <aside class="gd-toc"><nav><ul><li><a class="toc-1" href="#markdown-extensions">Markdown extensions</a></li></ul></nav></aside>
+  <aside class="gd-toc"><nav><ul><li><a class="toc-1" href="#footnotes">Footnotes</a></li></ul></nav></aside>
 </main>
 
     <footer class="gd-footer">
-      <nav class="gd-footer-nav"><a class="gd-nav-link prev" href="/reference/markdown"><div><small>Prev</small><h2>Markdown</h2></div><i class="bi bi-arrow-left-short"></i></a><a class="gd-nav-link next" href="/reference/markdown-extensions/admonitions"><div><small>Next</small><h2>Admonitions</h2></div><i class="bi bi-arrow-right-short"></i></a></nav>
+      <nav class="gd-footer-nav"><a class="gd-nav-link prev" href="/reference/markdown-extensions/collapsible-headings"><div><small>Prev</small><h2>Collapsible Headings</h2></div><i class="bi bi-arrow-left-short"></i></a><a class="gd-nav-link next" href="/reference/markdown-extensions/tables"><div><small>Next</small><h2>Tables</h2></div><i class="bi bi-arrow-right-short"></i></a></nav>
       <div class="gd-footer-info">
         <a class="gd-repo hidden" href="https://github.com/docodile/docodile">
   <i id="repo-icon" class="bi bi-github"></i>
